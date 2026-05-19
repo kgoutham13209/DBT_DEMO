@@ -10,8 +10,7 @@ DAYOFWEEK(TO_TIMESTAMP(STARTED_AT)) AS DAYOFWEEK_STARTED_AT,
 {{get_season('STARTED_AT')}} AS STATION_OF_YEAR
 
 
-FROM 
-{{ source('demo', 'bike') }}
+FROM {{ ref('stg_bike') }}
 
 )
 

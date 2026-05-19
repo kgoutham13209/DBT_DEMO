@@ -5,7 +5,7 @@ START_STATIO_ID as STATION_ID,
 START_STATION_NAME AS STATION_NAME,
 START_LAT as STATION_LATITUDE,
 START_LNG as STATION_LONGITUDE
-FROM  {{ source('demo', 'bike') }}
+FROM  {{ ref('stg_bike') }}
 
 
 )
